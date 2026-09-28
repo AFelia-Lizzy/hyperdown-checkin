@@ -4,9 +4,12 @@ name: Hyperdown Check-in
 on:
   workflow_dispatch:
   schedule:
-    # UTC 00:05 ≈ 北京 08:05
-    - cron: "5 0 * * *"
-
+  # 北京时间早上 6 点
+  - cron: "0 22 * * *"
+  # 北京时间中午 12 点
+  - cron: "0 4 * * *"
+  # 北京时间晚上 18 点
+  - cron: "0 10 * * *"
 permissions:
   contents: read
 
